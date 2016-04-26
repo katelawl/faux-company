@@ -1,0 +1,176 @@
+*,
+:before,
+:after {
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+	@include container;
+}
+
+html {
+	height:100%;
+	overflow: hidden;
+	font-size: 62.5%;
+
+ }
+ ::-moz-selection {
+    background: $very-light-pink;
+    text-shadow: none;
+}
+
+::selection {
+    background: $very-light-pink;
+    text-shadow: none;
+}
+
+ .home {
+ 	perspective: 1px;
+ 	transform-style: preserve-3d;
+ 	height:100%;
+ 	overflow-y: scroll;
+	overflow-x: hidden;
+
+
+ }
+ .slide:before {
+ 	content: " ";
+ 	position: absolute;
+ 	background: 50% 50% / cover;
+ }
+ .slide {
+ 	position: relative;
+ 	padding: 10vh 10%;
+ 	min-height: 100vh;
+ 	width: 100%;
+ 	transform-style: inherit;
+ 	background: 50% 50% / cover;
+ 	@include clearfixed;
+ }
+
+ .slide p,
+ .slide figure {
+ 	position: relative;
+ 	z-index:-1px;
+ }
+ .slide p {
+ 	font-size: $small-text;
+ 	 line-height: 180%;
+ }
+  .slide figure {
+ 	transform: translateZ(0.2px) scale(.8);
+ }
+
+ #title {
+    background: url(../img/back.png) no-repeat fixed;
+    background-size: cover;
+    width: 100%;
+ }
+
+ #slide1:before {
+ 	 	background-color: white;
+ 	 	transform: translateZ(-1px) scale(2);
+ 	 	z-index: -1;
+ }
+  #slide2 {
+ 	background-color: white;
+ 	background-attachment: fixed;
+ }
+
+ #slide3:before {
+ 	 	background-color: white;
+ 	 	transform: translateZ(-1px) scale(2);
+ 	 	z-index: -1;
+ }
+
+ //text style
+ h1 {
+	margin-top: 50px;
+	font-size: $large-text;
+	font-family: $merri-font;
+}
+
+.k{
+	font-family: $vibes-font;
+	font-size: $medium-text;
+}
+
+.x {
+	font-family: $vibes-font;
+	font-size: $small-text;
+}
+.kate {
+    color: rgba(229, 193, 194, 1);
+    text-shadow: black 1px 1px 0px;
+}
+h2 {
+	font-size: $medium-text;
+	font-family: $cardo-font;
+}
+
+//nav style
+nav, p {
+	font-size: $small-text;
+	font-family: $pro-font;
+}
+
+nav {
+	float:left;
+	width: 100%;
+
+
+	ul{
+		list-style-type: none;
+
+		li{
+			padding-left: 3em;
+			padding-right: 3em;
+			margin:5px;
+
+
+			a{
+				text-decoration: none;
+			}//a
+			a:link,
+			a:visited {
+				color:black;
+			}//a link visited
+			a:hover,
+			a:active {
+				color: $light-pink;
+			}
+		}
+	}
+}
+
+
+.line {
+	height:2px;
+	background: $light-pink;
+	border-bottom: 1px solid $light-pink;
+}
+
+
+
+.serum {
+	float:left;
+	width: 40%;
+	margin-top: 130px;
+	margin-left: 90px;
+
+}
+.cream {
+	float: right;
+	width: 50%;
+	margin-top: 130px;
+}
+
+.map {
+	margin-top: 130px;
+	float:left;
+}
+
+.text {
+	float: right;
+	margin-top: 130px;
+		margin-right: 100px;
+}
